@@ -1,16 +1,16 @@
 package com.shan.crudtestproject.controller;
 
-import java.security.Principal;
+import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
 
 @Controller
 class HomeController {
 
-    @GetMapping("/")
-    String index(Principal principal) {
-        return principal != null ? "home/homeSignedIn" : "home/homeNotSignedIn";
-    }
+	  String index(Model model) {
+	        model.addAttribute("now", LocalDateTime.now());
+	        return "index";
+	    }
 
 }
