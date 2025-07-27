@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	...
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+</style>
 </head>
-
 <body>
-	...
-	<div th:replace="fragments/header :: header">
-		<!-- ============================================================================ -->
-		<!-- This content is only used for static prototyping purposes (natural templates)-->
-		<!-- and is therefore entirely optional, as this markup fragment will be included -->
-		<!-- from "fragments/header.html" at runtime.                                     -->
-		<!-- ============================================================================ -->
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Static header</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="hero-unit">
-			<h1>Test</h1>
-			<p>
-				Welcome to the Spring MVC Quickstart application!
-				Get started quickly by signing up.
-			</p>
-			<p>
-				<a href="/signup" th:href="@{/signup}" class="btn btn-large btn-success">Sign up</a>
-			</p>
-		</div>
-		<div th:replace="fragments/footer :: footer">&copy; 2016 The Static Templates</div>
-	</div>
-	...
-</body>
 
+<div class="header">
+  <h1>SHAN</h1>
+  <p>My First Application</p>
+</div>
+
+<div class="content">
+  <h1>Content</h1>
+  <p>Some content blablabla, some content blablabla.</p>
+  
+</div>
+
+</body>
 </html>
